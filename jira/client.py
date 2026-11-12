@@ -547,7 +547,7 @@ class TokenAuth(AuthBase):
     def handle_401(
         self, response: requests.Response, **kwargs: Any
     ) -> requests.Response:
-        """Return the response, or for a 401 see :py:meth:`_handle_jraserver_76340`."""
+        """Return the response, or for a 401 see ``_handle_jraserver_76340``."""
         if response.status_code != 401:
             return response
         return self._handle_jraserver_76340(response, **kwargs)
